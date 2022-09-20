@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 
  body {
    font-family: 'Rubik', sans-serif;
-  
+   background-color: #0E1323;
  }
 
 

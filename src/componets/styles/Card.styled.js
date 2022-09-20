@@ -14,12 +14,14 @@ export const BgContainer = styled.div`
 	background-color: ${(props) => props.bgColor};
 	border-radius: ${(props) => props.theme.borderRadius};
 	position: relative;
+	height: 55px;
 	top: 20px;
 
 	img {
 		margin-left: auto;
 		margin-right: 1em;
 		display: block;
+		object-fit: cover;
 	}
 `;
 
@@ -49,5 +51,10 @@ export const Container = styled.div`
 
 	img + p {
 		font-size: 0.938rem;
+		color: #bbc0ff;
+	}
+
+	div:last-child {
+		padding-top: 1.2em;
 	}
 `;

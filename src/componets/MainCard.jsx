@@ -11,15 +11,25 @@ function MainCard() {
          </div>
          <img src="/images/image-jeremy.png" alt="jeremy" />
       </Hero>
-     
          <Nav>
           <ul>
-            <li>Daily</li>
-            <li>Weekly</li>
-            <li>Monthly</li>
+            <CustomLink href="/">Daily</CustomLink>
+            <CustomLink href="/weekly">Weekly</CustomLink>
+            <CustomLink href="/monthly">Monthly</CustomLink>
           </ul>
          </Nav>
     </StyledMainCard>
+  )
+}
+
+function CustomLink({href, children, ...props}) {
+  const path = window.location.pathname
+  return (
+    <li className={path === href ? "active" : ""}>
+      <a href={href} {...props}>
+        {children}
+        </a>
+       </li>
   )
 }
 

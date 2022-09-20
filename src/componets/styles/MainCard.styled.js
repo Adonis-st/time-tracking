@@ -6,7 +6,6 @@ export const StyledMainCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin-top: 1em;
-	margin-bottom: 3em;
 `;
 
 export const Hero = styled.div`
@@ -43,7 +42,7 @@ export const Hero = styled.div`
 
 export const Nav = styled.nav`
 	border-radius: ${(props) => props.theme.borderRadius};
-	padding: 2.2em 0;
+	padding: 2.1em 0;
 	background-color: hsl(235, 46%, 20%);
 	position: relative;
 	bottom: 20px;
@@ -53,21 +52,33 @@ export const Nav = styled.nav`
 		justify-content: space-evenly;
 		align-items: center;
 		padding: 0;
+		list-style: none;
 		max-width: 425px;
+		margin-top: 0.8em;
+		gap: 1rem;
 	}
 
 	li {
 		list-style: none;
-		margin-right: 1em;
 		color: #7078c9;
 		font-weight: 400;
+		font-size: 1.125rem;
+		gap: 1rem;
 	}
 
-	li:last-child {
-		margin-right: 0;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	li li:last-child {
 	}
 
 	li:hover {
+		color: white;
+	}
+
+	.active {
 		color: white;
 	}
 `;
