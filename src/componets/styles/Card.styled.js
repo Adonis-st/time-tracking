@@ -5,8 +5,12 @@ export const StyledCard = styled.div`
 	width: 90%;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1em;
+	margin-bottom: 0.6em;
 	color: white;
+	@media (min-width: 500px) {
+		width: 31%;
+		min-width: 186px;
+	}
 `;
 
 export const BgContainer = styled.div`
@@ -27,34 +31,58 @@ export const BgContainer = styled.div`
 
 export const Container = styled.div`
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	background-color: hsl(235, 46%, 20%);
 	padding: 2.1em;
+	padding-left: 1.7em;
 	border-radius: ${(props) => props.theme.borderRadius};
 	z-index: 1;
 
+	div:first-child {
+		display: flex;
+		justify-content: space-between;
+	}
 	h3 {
 		margin-bottom: 0.5em;
 		font-size: 1.125rem;
 		font-weight: 500;
 	}
 
-	h3 + p {
+	img {
+		height: 6px;
+		margin-top: 0.5em;
+	}
+
+	.second-div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.second-div p {
 		font-size: 2rem;
+		font-weight: 300;
+	}
+
+	.second-div p:last-child {
+		font-size: 0.938rem;
+		color: #bbc0ff;
+		margin-top: 0.7em;
+	}
+
+	@media (min-width: 500px) {
+		flex-direction: column;
+
+		.second-div p {
+			font-size: 3.5rem;
+		}
+
+		.second-div {
+			flex-direction: column;
+		}
 	}
 
 	img {
-		margin-left: auto;
-		margin-bottom: 1em;
-		display: block;
-	}
-
-	img + p {
-		font-size: 0.938rem;
-		color: #bbc0ff;
-	}
-
-	div:last-child {
-		padding-top: 1.2em;
+		height: 4px;
 	}
 `;

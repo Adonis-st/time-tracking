@@ -15,7 +15,7 @@ function Card(props) {
      break;
  }
   return (
-    <div>
+    <>
      { data.map (test => (
        <StyledCard >
         <BgContainer bgColor={test.background.color} >
@@ -24,16 +24,16 @@ function Card(props) {
        <Container>
            <div>
          <h3>{test.title}</h3>
-         <p>{page === "daily" ? test.timeframes.daily.current : page === "weekly" ? test.timeframes.weekly.current : test.timeframes.monthly.current}hrs</p>
+         <img src="/images/icon-ellipsis.svg" alt="" />
            </div>
-          <div>
-           <img src="/images/icon-ellipsis.svg" alt="" />
+          <div className="second-div">
+           <p>{page === "daily" ? test.timeframes.daily.current : page === "weekly" ? test.timeframes.weekly.current : test.timeframes.monthly.current}hrs</p>
            <p>Last Week - {page === "daily" ? test.timeframes.daily.previous : page === "weekly" ? test.timeframes.weekly.previous : test.timeframes.monthly.previous}hrs</p>
           </div>
         </Container>
        </StyledCard>
       ))}
-    </div>
+    </>
   )
 }
 

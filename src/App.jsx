@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components'
-import MainCard from './componets/MainCard'
 import GlobalStyles from './componets/styles/Global'
-import Card from './componets/Card'
+import Layout from './componets/Layout'
 
 
 function App() {
@@ -17,8 +16,7 @@ const theme = {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <MainCard />
-      <Card/>
+      <Layout />
     </ThemeProvider>
   )
 }

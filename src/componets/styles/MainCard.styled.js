@@ -3,9 +3,15 @@ import styled from 'styled-components';
 export const StyledMainCard = styled.div`
 	margin: 0 auto;
 	width: 90%;
+	max-width: 475px;
 	display: flex;
 	flex-direction: column;
-	margin-top: 1em;
+	margin-top: 1.5em;
+	@media (min-width: 500px) {
+		width: 100%;
+		margin-top: 3em;
+		min-width: 186px;
+	}
 `;
 
 export const Hero = styled.div`
@@ -37,6 +43,24 @@ export const Hero = styled.div`
 		border: 2px #fff solid;
 		border-radius: 50%;
 		max-width: 88px;
+	}
+
+	@media (min-width: 500px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-bottom: 3.5em;
+
+		h1 {
+			font-size: 2.5rem;
+			line-height: 1.2;
+		}
+		img {
+			width: 40.5%;
+			height: 40.5%;
+			margin-bottom: 2em;
+			min-height: 48px;
+			min-width: 48px;
+		}
 	}
 `;
 
@@ -71,14 +95,26 @@ export const Nav = styled.nav`
 		text-decoration: none;
 	}
 
-	li li:last-child {
-	}
-
 	li:hover {
 		color: white;
 	}
 
 	.active {
 		color: white;
+	}
+	@media (min-width: 600px) {
+		ul {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		li {
+			margin-left: 2em;
+			margin-bottom: 0.4em;
+		}
+
+		li:last-child {
+			margin-bottom: 0.1em;
+		}
 	}
 `;
